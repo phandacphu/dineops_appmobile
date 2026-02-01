@@ -1,32 +1,34 @@
-package com.example.app.features.auth
+package com.example.app.features.auth // Đổi lại đúng tên package của bạn
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.app.R
-import com.example.app.core.base.BaseActivity
 
-class LoginActivity : BaseActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // BƯỚC 9: ÁNH XẠ VIEW
-            val btnLogin = findViewById<Button>(R.id.btnLogin)
-            val edtUsername = findViewById<EditText>(R.id.edtUsername)
-            val edtPassword = findViewById<EditText>(R.id.edtPassword)
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val etUser = findViewById<EditText>(R.id.etUser)
+        val etPass = findViewById<EditText>(R.id.etPass)
 
-        // BƯỚC 9: XỬ LÝ CLICK LOGIN
         btnLogin.setOnClickListener {
-            val username = edtUsername.text.toString()
-            val password = edtPassword.text.toString()
+            val user = etUser.text.toString()
+            val pass = etPass.text.toString()
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Vui lòng nhập đủ thông tin", Toast.LENGTH_SHORT).show()
+            if (user.isBlank() || pass.isBlank()) {
+                Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Đăng nhập với $username", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Xin chào $user", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }

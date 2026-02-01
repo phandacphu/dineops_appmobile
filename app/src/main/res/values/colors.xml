@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="dine_green">#00552B</color>
+    <color name="dine_dark_grey">#333333</color>
+    <color name="dine_border">#D1D1D1</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_grey">#F8F9FA</color>
+    <color name="orange">#E65E19</color>
+    <color name="hong_nhat">#FFF0F0</color>
+    <color name="mau_do">#D32F2F</color>
+
 </resources>
