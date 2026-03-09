@@ -97,10 +97,16 @@
                         android:text="Đơn hàng"
                         android:textColor="#757575" />
                     <TextView
+<<<<<<< HEAD
                         android:id="@+id/tvOrderCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="..."
+=======
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="142"
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
                         android:textSize="24sp"
                         android:textStyle="bold"
                         android:textColor="#2E7D32" />
@@ -126,10 +132,16 @@
                         android:text="Bàn trống"
                         android:textColor="#757575" />
                     <TextView
+<<<<<<< HEAD
                         android:id="@+id/tvAvailableTableCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="..."
+=======
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
                         android:textSize="24sp"
                         android:textStyle="bold"
                         android:textColor="#2E7D32" />
@@ -183,7 +195,10 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+<<<<<<< HEAD
                         android:id="@+id/cardOrderList"
+=======
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
                         style="@style/DashboardCardStyle"
                         android:layout_width="0dp"
                         android:layout_columnWeight="1">
