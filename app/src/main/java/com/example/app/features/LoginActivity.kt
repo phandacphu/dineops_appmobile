@@ -36,13 +36,7 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // ================================
-            // PHẦN GỌI API LOGIN (ĐÃ COMMENT)
-            // Nếu sau này cần dùng lại API
-            // chỉ cần bỏ dấu // phía dưới
-            // ================================
 
-            /*
             val loginRequest = LoginRequest(identifier, password)
 
             RetrofitClient.instance.login(loginRequest).enqueue(object : Callback<AuthResponse> {
@@ -81,10 +75,10 @@ class LoginActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-                    Toast.makeText(this@LoginActivity, "Lỗi kết nối", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@LoginActivity, "   ", Toast.LENGTH_LONG).show()
                 }
             })
-            */
+
 
             startActivity(Intent(this@LoginActivity, MainActivityAll::class.java))
             finish()

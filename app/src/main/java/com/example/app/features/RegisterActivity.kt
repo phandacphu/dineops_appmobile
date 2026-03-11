@@ -76,23 +76,15 @@ class RegisterActivity : AppCompatActivity() {
             RetrofitClient.instance.register(registerRequest).enqueue(object : Callback<AuthResponse> {
                 override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
                     if (response.isSuccessful) {
-                        val authResponse = response.body()
-                        if (authResponse?.status == "success") {
-                            Toast.makeText(this@RegisterActivity, "Đăng ký thành công! Đang chuyển hướng...", Toast.LENGTH_LONG).show()
-                            finish()
-                        } else {
-                            Toast.makeText(this@RegisterActivity, "Lỗi: ${authResponse?.msg}", Toast.LENGTH_SHORT).show()
-                        }
+                        // Chỉ cần server trả về mã 200-299 là ta coi như thành công
+                        Toast.makeText(this@RegisterActivity, "Đăng ký thành công!", Toast.LENGTH_SHORT).show()
+                        finish()
                     } else {
-                        // Bắt lỗi 400 từ API (vd: "Email already exists")
-                        try {
-                            val errorBody = response.errorBody()?.string()
-                            val jsonObject = JSONObject(errorBody ?: "")
-                            val msg = jsonObject.getString("msg")
-                            Toast.makeText(this@RegisterActivity, msg, Toast.LENGTH_LONG).show()
-                        } catch (e: Exception) {
-                            Toast.makeText(this@RegisterActivity, "Đăng ký thất bại. Tài khoản có thể đã tồn tại!", Toast.LENGTH_SHORT).show()
-                        }
+                        // Nếu server trả về lỗi (mã 4xx, 5xx)
+                        Toast.makeText(this@RegisterActivity, "Lỗi: Không đăng ký được!", Toast.LENGTH_SHORT).show()
+
+                        // MẸO: In lỗi ra Logcat để bạn biết vì sao không đăng ký được (ví dụ: trùng email)
+                        android.util.Log.e("DEBUG_LOI", "Nội dung lỗi: ${response.errorBody()?.string()}")
                     }
                 }
 

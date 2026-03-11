@@ -12,12 +12,28 @@ class MainActivityAll : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_all)
 
+        // Mở Kho hàng
         val btnWarehouse = findViewById<View>(R.id.cardWarehouse)
-
-        // 2. Thiết lập sự kiện bấm nút
         btnWarehouse.setOnClickListener {
-            val intent = Intent(this, WarehouseActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, WarehouseActivity::class.java))
+        }
+
+        // Mở Nhân viên
+        val cardStaff = findViewById<View>(R.id.cardStaff)
+        cardStaff.setOnClickListener {
+            startActivity(Intent(this, StaffActivity::class.java))
+        }
+
+        // Mở Thực đơn
+        val cardMenu = findViewById<View>(R.id.cardMenu)
+        cardMenu.setOnClickListener {
+            startActivity(Intent(this, MenuActivity::class.java))
+        }
+
+        // Mở Chi nhánh
+        val cardBranch = findViewById<View>(R.id.cardBranch)
+        cardBranch.setOnClickListener {
+            startActivity(Intent(this, BranchSettingsActivity::class.java))
         }
     }
 }

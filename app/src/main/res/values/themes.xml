@@ -3,6 +3,11 @@
     </style>
     <style name="Theme.Dineops" parent="Base.Theme.Dineops" />
 
+    <!-- Style cho ảnh tròn -->
+    <style name="CircleImageView" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="DashboardCard">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>

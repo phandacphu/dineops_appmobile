@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="22dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Danh sách Nhân viên"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/btnCalendar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@android:drawable/ic_menu_today" />
+
+        <ImageView
+            android:id="@+id/btnNotification"
+            android:layout_width="24dp"
+            android:layout_height="19dp"
+             />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtSearchStaff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/headerContainer"
+        android:layout_margin="16dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Tìm kiếm nhân viên..."
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edtSearchStaff"
+        android:layout_above="@+id/btnAddStaff"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái: Đang làm"
+                android:textStyle="bold"
+                android:textColor="#004D27" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStaffWorking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái: Nghỉ"
+                android:textStyle="bold"
+                android:textColor="#FF0000" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStaffOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnAddStaff"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="+ Thêm nhân viên"
+        android:backgroundTint="#004D27"
+        android:textColor="@android:color/white"
+        android:elevation="8dp" />
+
+</RelativeLayout>

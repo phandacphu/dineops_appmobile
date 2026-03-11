@@ -1,72 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F8F8"
-    android:fillViewport="true">
+    android:orientation="vertical"
+    android:background="#F8F9FA">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chi nhánh"
-            tools:text="Chi nhánh hiện tại"
+            android:layout_centerInParent="true"
+            android:text="Cài đặt Chi nhánh"
             android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="18sp" />
+    </RelativeLayout>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp"
-            android:layout_marginBottom="20dp">
-            <Spinner
-                android:id="@+id/spinnerBranch"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </com.google.android.material.card.MaterialCardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thông tin"
-            tools:text="Thông tin chung"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginBottom="8dp"/>
-
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="2dp"
-            android:layout_marginBottom="20dp">
-            <LinearLayout
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-                <TextView android:text="Tên chi nhánh" tools:text="TÊN CHI NHÁNH" android:textSize="10sp" android:textColor="#757575"/>
-                <TextView android:text="Data" tools:text="Main Street Branch" android:textStyle="bold" android:textColor="#000000" android:textSize="14sp" android:layout_marginBottom="12dp"/>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Lưu thay đổi"
-            android:backgroundTint="#004D40"
-            app:cornerRadius="12dp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
 
-    </LinearLayout>
-</ScrollView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Chi nhánh hiện tại"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnAddBranch"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@android:drawable/ic_input_add"
+                            app:tint="#006400" />
+                    </RelativeLayout>
+
+                    <Spinner
+                        android:id="@+id/spinnerBranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thông tin chung"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvEditAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="Chỉnh sửa tất cả"
+                            android:textColor="#006400"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edtBranchName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tên chi nhánh"
+                        android:enabled="false"
+                        android:inputType="text" />
+                    <EditText
+                        android:id="@+id/edtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Địa chỉ"
+                        android:enabled="false"
+                        android:inputType="textPostalAddress" />
+                    <EditText
+                        android:id="@+id/edtPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Số điện thoại"
+                        android:enabled="false"
+                        android:inputType="phone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#006400"
+                android:text="Lưu thay đổi"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

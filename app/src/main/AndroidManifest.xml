@@ -21,21 +21,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name="com.example.app.features.RegisterActivity" />
         <activity android:name="com.example.app.features.MainActivityAll" />
         <activity android:name="com.example.app.features.MainActivity" />
         <activity android:name="com.example.app.features.OrderListActivity" />
         <activity android:name="com.example.app.features.OrderDetailActivity" />
+        <activity android:name="com.example.app.features.WarehouseActivity" android:exported="false" />
+        <activity android:name="com.example.app.features.BranchSettingsActivity" android:exported="false" />
+        <activity android:name=".features.ImportIngredientActivity" android:exported="false" />
+        <activity android:name=".features.EditIngredientActivity" android:exported="false" />
+        <activity android:name=".features.StaffActivity" />
+        <activity android:name="com.example.app.features.EditStaffActivity" />
+        <activity android:name="com.example.app.features.AddStaffActivity" />
+        <activity android:name=".features.MenuActivity" />
+        <activity android:name="com.example.app.features.AddDishActivity" />
+        <activity android:name="com.example.app.features.EditDishActivity" />
 
-
-        <activity
-            android:name="com.example.app.features.WarehouseActivity"
-            android:exported="false" />
-
-        <activity
-            android:name="com.example.app.features.BranchSettingsActivity"
-            android:exported="false" />
 
     </application>
 </manifest>

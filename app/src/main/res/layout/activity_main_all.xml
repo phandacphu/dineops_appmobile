@@ -206,6 +206,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBranch"
                         style="@style/DashboardCardStyle"
                         android:layout_width="0dp"
                         android:layout_columnWeight="1"
@@ -217,24 +218,43 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardStaff"
                         style="@style/DashboardCardStyle"
                         android:layout_width="0dp"
-                        android:layout_columnWeight="1"
-                        android:layout_rowWeight="1">
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1">
+
                         <LinearLayout style="@style/DashboardCardContent">
-                            <ImageView style="@style/DashboardIconStyle" android:src="@drawable/ic_8" app:tint="#2E7D32" />
-                            <TextView style="@style/DashboardTextStyle" android:text="Nhân viên" />
+
+                            <ImageView
+                                style="@style/DashboardIconStyle"
+                                android:src="@drawable/ic_8"
+                                app:tint="#2E7D32" />
+
+                            <TextView
+                                style="@style/DashboardTextStyle"
+                                android:text="Nhân viên" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
                         style="@style/DashboardCardStyle"
                         android:layout_width="0dp"
-                        android:layout_columnWeight="1"
-                        android:layout_rowWeight="1">
-                        <LinearLayout style="@style/DashboardCardContent">
-                            <ImageView style="@style/DashboardIconStyle" android:src="@drawable/ic_9" app:tint="#2E7D32" />
-                            <TextView style="@style/DashboardTextStyle" android:text="Thực đơn" />
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1">
+
+                        <LinearLayout
+                            android:id="@+id/cardMenu"
+                            style="@style/DashboardCardContent">
+
+                            <ImageView
+                                style="@style/DashboardIconStyle"
+                                android:src="@drawable/ic_9"
+                                app:tint="#2E7D32" />
+
+                            <TextView
+                                style="@style/DashboardTextStyle"
+                                android:text="Thực đơn" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
