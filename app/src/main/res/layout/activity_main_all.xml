@@ -259,6 +259,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+<<<<<<< HEAD
                         android:id="@+id/cardWarehouse"
                         style="@style/DashboardCardStyle"
                         android:layout_width="0dp"
@@ -275,6 +276,15 @@
                             <TextView
                                 style="@style/DashboardTextStyle"
                                 android:text="Kho hàng" />
+=======
+                        style="@style/DashboardCardStyle"
+                        android:layout_width="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1">
+                        <LinearLayout style="@style/DashboardCardContent">
+                            <ImageView style="@style/DashboardIconStyle" android:src="@drawable/ic_10" app:tint="#2E7D32" />
+                            <TextView style="@style/DashboardTextStyle" android:text="Kho hàng" />
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 

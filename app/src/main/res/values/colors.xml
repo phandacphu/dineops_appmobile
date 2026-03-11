@@ -15,8 +15,11 @@
     <color name="background_grey">#F5F5F5</color>
     <color name="dine_dark_grey">#757575</color>
     <color name="orange">#FF9800</color>
+<<<<<<< HEAD
     <color name="dineops_green">#006432</color>
     <color name="warning_red">#D32F2F</color>
     <color name="bg_light_gray">#F8F9FA</color>
     <color name="tag_green_bg">#E8F5E9</color>
+=======
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
 </resources>

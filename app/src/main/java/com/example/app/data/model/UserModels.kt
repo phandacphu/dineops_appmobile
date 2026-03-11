@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 package com.example.app.data.model
 
+=======
+package com.example.app.data.model // Đảm bảo dòng này khớp với cấu trúc thư mục của bạn
+
+// 1. Thùng chứa cho Đăng nhập (Request)
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
 data class LoginRequest(
     val identifier: String,
     val password: String
 )
 
+<<<<<<< HEAD
+=======
+// 2. Thùng chứa cho Đăng ký (Request)
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
 data class RegisterRequest(
     val email: String?,
     val user_name: String?,
@@ -15,6 +25,7 @@ data class RegisterRequest(
     val last_name: String
 )
 
+<<<<<<< HEAD
 data class AuthResponse(
     val status: String?,
     val code: Int?,
@@ -36,4 +47,30 @@ data class UserInfo(
     val user_name: String?,
     val email: String?,
     val full_name: String?
+=======
+// 3. Phản hồi chung từ API (Response)
+data class AuthResponse(
+    val status: String,
+    val code: Int,
+    val msg: String,
+    val data: AuthData?
+)
+
+// 4. Chi tiết dữ liệu bên trong (Token và User)
+data class AuthData(
+    val access_token: String,
+    val refresh_token: String,
+    val token_type: String,
+    val expires_in: Int,
+    val user: UserInfo
+)
+
+// 5. Thông tin chi tiết của User nhận về
+data class UserInfo(
+    val id: Int,
+    val uuid: String,
+    val user_name: String,
+    val email: String?,
+    val full_name: String
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
 )

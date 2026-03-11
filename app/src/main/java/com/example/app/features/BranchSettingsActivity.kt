@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+<<<<<<< HEAD
 import com.example.app.R
 import com.example.app.data.model.Branch
 
@@ -30,6 +31,7 @@ class BranchSettingsActivity : AppCompatActivity() {
         setupSpinner()
         handleEvents()
     }
+<<<<<<< HEAD
 
     private fun initViews() {
         spinnerBranch = findViewById(R.id.spinnerBranch)
@@ -129,3 +131,9 @@ class BranchSettingsActivity : AppCompatActivity() {
         btnSave.visibility = if (enabled) View.VISIBLE else View.GONE
     }
 }
+=======
+}
+=======
+
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
+>>>>>>> 4d22209d08c3f5df9efc8aba2f9241003a457819

@@ -14,7 +14,11 @@
         android:usesCleartextTraffic="true">
 
         <activity
+<<<<<<< HEAD
             android:name="com.example.app.features.LoginActivity"
+=======
+        android:name="com.example.app.features.LoginActivity"
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +27,7 @@
         </activity>
         <activity android:name="com.example.app.features.RegisterActivity" />
         <activity android:name="com.example.app.features.MainActivityAll" />
+<<<<<<< HEAD
         <activity android:name="com.example.app.features.MainActivity" />
         <activity android:name="com.example.app.features.OrderListActivity" />
         <activity android:name="com.example.app.features.OrderDetailActivity" />
@@ -39,4 +44,13 @@
 
 
     </application>
+<<<<<<< HEAD
 </manifest>
+=======
+=======
+
+    </application>
+
+>>>>>>> e60e341f603258cc3534cac0c10d2dcf96724631
+</manifest>
+>>>>>>> 4d22209d08c3f5df9efc8aba2f9241003a457819
